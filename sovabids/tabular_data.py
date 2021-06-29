@@ -6,7 +6,7 @@ class carga_datos(object):
     def tabular_data(self, ch_names, ch_types, sfreq, bad_ch=[], description=[]):
         self.info = mne.create_info(ch_names, sfreq=fs, ch_types=ch_type)
         self.info['description'] = description
-        print(self.info)
+        # print(self.info)
         if len(bad_ch):
             self.info['bads'] = bad_ch
         return self.info
